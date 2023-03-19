@@ -6,8 +6,8 @@ function App() {
     return (
         <div>
             Hello, world!
-            <Rating />
-            <Accordeon />
+            <Rating/>
+            <Accordeon/>
         </div>
     );
 }
@@ -15,11 +15,11 @@ function App() {
 function Rating() {
     return (
         <div>
-            <div>starr</div>
-            <div>starr</div>
-            <div>starr</div>
-            <div>starr</div>
-            <div>starr</div>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
         </div>
     );
 }
@@ -34,7 +34,15 @@ function Accordeon() {
                 <li>3</li>
             </ul>
         </div>
-    )
+    );
+}
+
+function Star() {
+    return (
+        <div>
+            <div>Star</div>
+        </div>
+    );
 }
 
 export default App;
