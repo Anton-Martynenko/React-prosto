@@ -16,8 +16,6 @@ export function Rating() {
 function Star() {
     console.log("Star rendering");
     return (
-        <div>
-            <span>Star </span>
-        </div>
+        <span>Star </span>
     );
 }

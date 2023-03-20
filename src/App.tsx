@@ -8,6 +8,7 @@ function App() {
     console.log("App rendering");
     return (
         <div>
+            <input type='date'/>
             <AppTitle />
             <Rating />
             <Accordion />
