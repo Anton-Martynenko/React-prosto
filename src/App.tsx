@@ -9,6 +9,8 @@ function App() {
     return (
         <div>
             <input type='date'/>
+            <input value='yo' type={'password'}/>
+            <input value='yo'/>
             <AppTitle />
             <Rating />
             <Accordion />
