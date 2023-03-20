@@ -42,6 +42,7 @@ function Accordeon() {
 }
 
 function Star() {
+    console.log("Star rendered");
     return (
         <div>
             <div>Star</div>
