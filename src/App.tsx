@@ -3,6 +3,14 @@ import './App.css';
 import Accordion from "./components/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
+export type TitleType = {
+    title: string
+}
+
+export type RatingValueType = {
+    value?: number
+    selected?: boolean
+}
 
 function App() {
     console.log("App rendering");
@@ -24,7 +32,7 @@ function App() {
     );
 }
 
-function PageTitle(props: any) {
+function PageTitle(props: TitleType) {
     console.log("AppTitle rendering");
     return <div>{props.title}</div>
 }

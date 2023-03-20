@@ -1,6 +1,7 @@
 import React from "react";
+import {RatingValueType} from "../../App";
 
-export function Rating(props: any) {
+export function Rating(props: RatingValueType) {
     console.log("Rating rendering");
     if (props.value === 0) {
         return (
@@ -65,7 +66,7 @@ export function Rating(props: any) {
     }
 }
 
-function Star(props: any) {
+function Star(props: RatingValueType) {
     console.log("Star rendering");
     if (props.selected === true) {
         return <span><b>Star </b></span>;

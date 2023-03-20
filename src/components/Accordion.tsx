@@ -1,6 +1,7 @@
 import React from "react";
+import {TitleType} from "../App";
 
-function Accordion(props: any) {
+function Accordion(props: TitleType) {
     console.log("Accordion rendering");
     return (
         <div>
@@ -10,7 +11,7 @@ function Accordion(props: any) {
     );
 }
 
-function AccordionTitle(props: any) {
+function AccordionTitle(props: TitleType) {
     console.log("AccordionTitle rendering");
     return (
         <h3>{props.title}</h3>
