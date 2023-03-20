@@ -11,7 +11,8 @@ function App() {
             <PageTitle title={"Hello world!"}/>
             <PageTitle title={"Hello my friends!"}/>
             <Rating value={3}/>
-            <Accordion />
+            <Accordion title={"Menu"}/>
+            <Accordion title={"Exit"}/>
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
