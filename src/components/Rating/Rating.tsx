@@ -17,7 +17,7 @@ function Star() {
     console.log("Star rendering");
     return (
         <div>
-            <div>Star</div>
+            <span>Star </span>
         </div>
     );
 }
