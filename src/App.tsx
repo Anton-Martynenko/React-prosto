@@ -5,11 +5,15 @@ import './App.css';
 function App() {
     return (
         <div>
-            Hello, world!
-            <Rating/>
-            <Accordeon/>
+            <AppTitle />
+            <Rating />
+            <Accordeon />
         </div>
     );
+}
+
+function AppTitle() {
+    return <>Hello, world!</>
 }
 
 function Rating() {
