@@ -23,7 +23,7 @@ type StarType = {
 
 function Star(props: StarType) {
     console.log("Star rendering");
-    if (props.selected === true) {
+    if (props.selected) {
         return <span><b>Star </b></span>;
     } else {
         return <span>Star </span>;

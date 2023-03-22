@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/Accordion";
+import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 
 
 export type PageTitleType = {
@@ -28,6 +29,7 @@ function App() {
             <OnOff />
             <OnOff />
             <OnOff />
+            <UncontrolledAccordion titleValue={"Yo"}/>
         </div>
     );
 }
