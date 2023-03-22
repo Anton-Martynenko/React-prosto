@@ -31,7 +31,7 @@ function App() {
             <OnOff />
             <OnOff />
             <UncontrolledAccordion titleValue={"Yo"}/>
-            <UncontrolledRating value={3}/>
+            <UncontrolledRating />
         </div>
     );
 }
