@@ -19,21 +19,18 @@ function App() {
         <div>
             <PageTitle title={"Hello world!"}/>
             <PageTitle title={"Hello my friends!"}/>
-            <Rating value={3}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Exit"} collapsed={false}/>
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={ratingValue}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
-            <Rating value={3}/>
-            <OnOff />
-            <OnOff />
-            <OnOff />
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <OnOff/>
+            <OnOff/>
+            <OnOff/>
             <UncontrolledAccordion titleValue={"Yo"}/>
-            <UncontrolledRating />
+            <UncontrolledRating/>
         </div>
     );
 }
