@@ -6,6 +6,7 @@ import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
 import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import {RatingValueType} from "./components/Rating/Rating";
+import OnOff from "./components/OnOff/OnOff";
 
 
 export type PageTitleType = {
@@ -16,6 +17,7 @@ function App() {
     console.log("App rendering");
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+    let [active, setActive] = useState<boolean>(false);
     return (
         <div>
             <PageTitle title={"Hello world!"}/>
@@ -32,6 +34,7 @@ function App() {
             <UncontrolledOnOff/>
             <UncontrolledAccordion titleValue={"Yo"}/>
             <UncontrolledRating/>
+            <OnOff onChange={() => {setActive(!active)}} on={active}/>
         </div>
     );
 }
