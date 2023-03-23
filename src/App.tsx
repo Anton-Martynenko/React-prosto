@@ -23,18 +23,20 @@ function App() {
             <PageTitle title={"Hello world!"}/>
             <PageTitle title={"Hello my friends!"}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
-            <Accordion titleValue={"Exit"} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {
+                setAccordionCollapsed(!accordionCollapsed)
+            }}/>
+            <Accordion titleValue={"Exit"} collapsed={accordionCollapsed} onChange={() => {
+                setAccordionCollapsed(!accordionCollapsed)
+            }}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UncontrolledOnOff/>
-            <UncontrolledOnOff/>
-            <UncontrolledOnOff/>
+            <UncontrolledOnOff onChange={setActive}/> {active.toString()}
             <UncontrolledAccordion titleValue={"Yo"}/>
             <UncontrolledRating/>
-            <OnOff onChange={() => {setActive(!active)}} on={active}/>
+            <OnOff onChange={setActive} on={active}/>
         </div>
     );
 }
