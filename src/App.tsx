@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
-import OnOff from "./components/OnOff/OnOff";
+import UncontrolledOnOff from "./components/OnOff/UncontrolledOnOff";
 import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
 import UncontrolledRating from "./components/Rating/UncontrolledRating";
 import {RatingValueType} from "./components/Rating/Rating";
@@ -27,9 +27,9 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
+            <UncontrolledOnOff/>
+            <UncontrolledOnOff/>
+            <UncontrolledOnOff/>
             <UncontrolledAccordion titleValue={"Yo"}/>
             <UncontrolledRating/>
         </div>

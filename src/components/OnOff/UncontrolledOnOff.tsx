@@ -6,7 +6,7 @@ type PropsType = {
 }
 
 function UncontrolledOnOff(props: PropsType) {
-    //let [on, setOn] = useState(false);
+    let [on, setOn] = useState(false);
 
     const onStyle = {
         width: '30px',
