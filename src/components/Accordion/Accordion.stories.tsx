@@ -13,5 +13,5 @@ export const MenuCollapsedMode = () => <Accordion titleValue={'Menu'} collapsed=
 export const UserUncollapsedMode = () => <Accordion titleValue={'User'} collapsed={false} onChange={callback} />
 export const ModeChanging = () => {
     let [value, setValue] = useState<boolean>(true);
-    return <Accordion titleValue={'User'} collapsed={false} onChange={() => {setValue(!value)}} />
+    return <Accordion titleValue={'User'} collapsed={value} onChange={() => {setValue(!value)}} />
 }

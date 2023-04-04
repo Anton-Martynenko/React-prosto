@@ -9,7 +9,7 @@ export default {
 
 export const OnMode = () => <OnOff on={true} onChange={action("on or off clicked")} />
 export const OffMode = () => <OnOff on={false} onChange={action("on or off clicked")} />
-export const ModeChanging = () => {
+export const OnOffChanging = () => {
     let [value, setValue] = useState<boolean>(true);
-    return <OnOff on={value} onChange={setValue} />
+    return <OnOff on={value} onChange={setValue} />;
 }
