@@ -3,9 +3,10 @@ import React, {useState} from "react";
 
 type PropsType = {
     onChange: (on: boolean) => void
+    defaultOn?: boolean
 }
 
-function UncontrolledOnOff(props: PropsType) {
+export function UncontrolledOnOff(props: PropsType) {
     let [on, setOn] = useState(false);
 
     const onStyle = {
