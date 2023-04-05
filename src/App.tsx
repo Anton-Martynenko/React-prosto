@@ -35,7 +35,7 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <UncontrolledOnOff onChange={setActive}/> {active.toString()}
             <UncontrolledAccordion titleValue={"Yo"}/>
-            <UncontrolledRating/>
+            <UncontrolledRating onChange={(value) => value}/>
             <OnOff onChange={setActive} on={active}/>
         </div>
     );
