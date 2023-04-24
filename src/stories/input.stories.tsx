@@ -7,5 +7,12 @@ export default {
     //component: OnOff
 };
 
-export const UncontrolledInput = () => <input/>
-export const ControlledInputWithFixedValue = () => <input value={'it-incubator'}/>
+export const UncontrolledInput = () => <input/>;
+export const TrackValueOfUncontrolledInput = () => {
+    const [value, setValue] = useState('');
+    return <><input onChange={e => {
+        const actualValue = e.currentTarget.value;
+        setValue(actualValue);
+    }}/> - {value}</>;
+}
+export const ControlledInputWithFixedValue = () => <input value={'it-incubator'}/>;
