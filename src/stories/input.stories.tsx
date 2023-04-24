@@ -16,6 +16,15 @@ export const TrackValueOfUncontrolledInput = () => {
     }
     return <><input onChange={onChange}/> - {value}</>;
 };
+
+export const ControlledInput = () => {
+    const [parentValue, setParentValue] = useState('');
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setParentValue(e.currentTarget.value)
+    }
+    return <input value={parentValue} onChange={onChange}/>
+};
+
 export const GetValueOfUncontrolledInputByButtonPress = () => {
     const [value, setValue] = useState('');
     const inputRef = useRef<HTMLInputElement>(null);
