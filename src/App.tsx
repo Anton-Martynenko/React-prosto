@@ -23,12 +23,12 @@ function App() {
             <PageTitle title={"Hello world!"}/>
             <PageTitle title={"Hello my friends!"}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {
-                setAccordionCollapsed(!accordionCollapsed)
-            }} items={[]}/>
-            <Accordion titleValue={"Exit"} collapsed={accordionCollapsed} onChange={() => {
-                setAccordionCollapsed(!accordionCollapsed)
-            }} items={[]}/>
+            {/*<Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onChange={() => {*/}
+            {/*    setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*}} />*/}
+            {/*<Accordion titleValue={"Exit"} collapsed={accordionCollapsed} onChange={() => {*/}
+            {/*    setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*}} />*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
