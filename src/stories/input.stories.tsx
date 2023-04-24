@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useRef, useState} from 'react';
 import {action} from '@storybook/addon-actions';
 import OnOff from '../components/OnOff/OnOff';
 
@@ -10,9 +10,19 @@ export default {
 export const UncontrolledInput = () => <input/>;
 export const TrackValueOfUncontrolledInput = () => {
     const [value, setValue] = useState('');
-    return <><input onChange={e => {
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         const actualValue = e.currentTarget.value;
         setValue(actualValue);
-    }}/> - {value}</>;
-}
+    }
+    return <><input onChange={onChange}/> - {value}</>;
+};
+export const GetValueOfUncontrolledInputByButtonPress = () => {
+    const [value, setValue] = useState('');
+    const inputRef = useRef<HTMLInputElement>(null);
+    const save = () => {
+        const el = inputRef.current as HTMLInputElement;
+        setValue(el.value);
+    }
+    return <><input ref={inputRef}/> <button onClick={save}>save</button> - actualValue: {value}</>;
+};
 export const ControlledInputWithFixedValue = () => <input value={'it-incubator'}/>;
