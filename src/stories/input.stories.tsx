@@ -33,6 +33,19 @@ export const ControlledCheckbox = () => {
     return <input type={"checkbox"} checked={parentValue} onChange={onChange}/>
 };
 
+export const ControlledSelect = () => {
+    const [parentValue, setParentValue] = useState(true);
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setParentValue(e.currentTarget.checked)
+    }
+    return <select>
+        <option> </option>
+        <option value={'1'}>Minsk</option>
+        <option value={'2'}>Moskow</option>
+        <option value={'3'}>Omsk</option>
+    </select>
+};
+
 export const GetValueOfUncontrolledInputByButtonPress = () => {
     const [value, setValue] = useState('');
     const inputRef = useRef<HTMLInputElement>(null);
