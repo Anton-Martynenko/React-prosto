@@ -38,7 +38,7 @@ function AccordionBody(props: AccordionBodyPropsType) {
     console.log("AccordionBody rendering");
     return (
         <ul>
-            {props.items.map(i => <li>{i}</li>)}
+            {props.items.map((i, index) => <li key={index}>{i}</li>)}
         </ul>
     );
 }
