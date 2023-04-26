@@ -9,9 +9,10 @@ export default {
 };
 
 export const BaseExample = () => {
+    const [value, setValue] = useState('1');
     return (
-    <Select value={'1'}
-            onChange={action('Select changed')}
+    <Select value={value}
+            onChange={setValue}
             items={[
                 {value: '1', title: 'Minsk'},
                 {value: '2', title: 'Moscow'},
@@ -21,9 +22,11 @@ export const BaseExample = () => {
 };
 
 export const WithoutValue = () => {
+    const [value, setValue] = useState(null);
     return (
         <Select
-                onChange={action('Select changed')}
+                onChange={setValue}
+                value={null}
                 items={[
                     {value: '1', title: 'Minsk'},
                     {value: '2', title: 'Moscow'},

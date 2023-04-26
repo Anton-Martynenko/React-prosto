@@ -19,17 +19,16 @@ export function Select(props: SelectPropsType) {
 
     return (
         <>
-            <select>
-                <option value="1">Minsk</option>
-                <option value="2">Moskow</option>
-                <option value="3">Omsk</option>
-            </select>
             <div className={styles.select}>
-                <h3 onClick={toggleItems}>{selectedItem && selectedItem.title}</h3>
+                <span className={styles.main} onClick={toggleItems}>{selectedItem && selectedItem.title}</span>
                 {
                     active &&
                     <div className={styles.item}>
-                        {props.items.map(i => <div key={i.value}>{i.title}</div>)}
+                        {props.items.map(i => <div
+                            key={i.value}
+                            onClick={() => {props.onChange(i.value)}}
+                        >{i.title}
+                        </div>)}
                     </div>
                 }
             </div>
