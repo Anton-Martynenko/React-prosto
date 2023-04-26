@@ -18,4 +18,16 @@ export const BaseExample = () => {
                 {value: '3', title: 'Omsk'}
             ]} />
     )
-}
+};
+
+export const WithoutValue = () => {
+    return (
+        <Select
+                onChange={action('Select changed')}
+                items={[
+                    {value: '1', title: 'Minsk'},
+                    {value: '2', title: 'Moscow'},
+                    {value: '3', title: 'Omsk'}
+                ]} />
+    )
+};

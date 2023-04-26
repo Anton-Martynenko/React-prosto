@@ -6,16 +6,23 @@ type ItemType = {
 }
 
 type SelectPropsType = {
-    value: any
+    value?: any
     onChange: (value: any) => void
     items: ItemType[]
 }
 
 export function Select(props: SelectPropsType) {
+    const selectedItem = props.items.find(i => i.value === props.value)
+
     return (
         <div>
-            <div>{}</div>
-            {props.items.map(i => <div>{i.title}</div>)}
+            <select>
+                <option value="1">Minsk</option>
+                <option value="2">Moskow</option>
+                <option value="3">Omsk</option>
+            </select>
+            <h3>{selectedItem && selectedItem.title}</h3>
+            {props.items.map(i => <div key={i.value}>{i.title}</div>)}
         </div>
     );
 }
