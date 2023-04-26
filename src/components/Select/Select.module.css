@@ -12,7 +12,7 @@
     border: 1px black solid;
 }
 
-item.selected {
+.item.selected {
     background-color: blue;
     color: white;
 }
