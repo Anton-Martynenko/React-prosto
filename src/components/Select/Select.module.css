@@ -3,5 +3,9 @@
 }
 
 .item {
-    border: 1px red solid;
+
+    position: absolute;
+    padding: 5px;
+    border: 1px black solid;
 }
+
