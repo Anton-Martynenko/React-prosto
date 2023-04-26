@@ -5,10 +5,15 @@
     min-width: 40px;
 }
 
-.item {
+.items {
 
     position: absolute;
     padding: 5px;
     border: 1px black solid;
+}
+
+item.selected {
+    background-color: blue;
+    color: white;
 }
 
