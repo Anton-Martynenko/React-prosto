@@ -1,4 +1,5 @@
-import React, {useReducer, useState} from "react";
+import React, {useReducer} from "react";
+import {reducer, TOGGLE_CONSTANT} from "./Reducer";
 
 type AccordionPropsType = {
     titleValue: string
@@ -10,26 +11,10 @@ type AccordionTitlePropsType = {
     onClick: () => void
 }
 
-type ActionType = {
-    type: string
-}
-
-const TOGGLE_CONSTANT = "TOGGLE-COLLAPSED";
-
-const reducer = (state: boolean, action: ActionType) => {
-    switch (action.type) {
-        case TOGGLE_CONSTANT:
-            return !state;
-        default:
-            throw new Error('Bad action type')
-    }
-    return state;
-}
-
 export function UncontrolledAccordion(props: AccordionPropsType) {
     console.log("Accordion rendering");
     // let [collapsed, setCollapsed] = useState(false);
-    let [collapsed, dispatch] = useReducer(reducer, false);
+    let [state, dispatch] = useReducer(reducer, {collapsed: false});
     return (
         <div>
             {/*<AccordionTitle title={props.titleValue} onClick={() => {*/}
@@ -38,7 +23,7 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
             <AccordionTitle title={props.titleValue} onClick={() => {
                 dispatch({type: TOGGLE_CONSTANT})
             }}/>
-            {!collapsed && <AccordionBody/>}
+            {!state.collapsed && <AccordionBody/>}
         </div>
     );
 
