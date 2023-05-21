@@ -14,9 +14,14 @@ type ActionType = {
     type: string
 }
 
+const TOGGLE_CONSTANT = "TOGGLE-COLLAPSED";
+
 const reducer = (state: boolean, action: ActionType) => {
-    if (action.type === "TOGGLE-COLLAPSED") {
-        return !state;
+    switch (action.type) {
+        case TOGGLE_CONSTANT:
+            return !state;
+        default:
+            throw new Error('Bad action type')
     }
     return state;
 }
@@ -31,7 +36,7 @@ export function UncontrolledAccordion(props: AccordionPropsType) {
             {/*    setCollapsed(!collapsed)*/}
             {/*}}/>*/}
             <AccordionTitle title={props.titleValue} onClick={() => {
-                dispatch({type: "TOGGLE-COLLAPSED"})
+                dispatch({type: TOGGLE_CONSTANT})
             }}/>
             {!collapsed && <AccordionBody/>}
         </div>
