@@ -10,6 +10,15 @@ type AccordionTitlePropsType = {
     onClick: () => void
 }
 
+type ActionType = {
+    type: string
+}
+
+const reducer = (state: boolean, action: ActionType) => {
+
+    return state;
+}
+
 export function UncontrolledAccordion(props: AccordionPropsType) {
     console.log("Accordion rendering");
     let [collapsed, setCollapsed] = useState(false);
