@@ -17,3 +17,11 @@ test ('collapsed should be false', () => {
 
     expect(newState.collapsed).toBe(false);
 })
+
+test ('crazy action test', () => {
+    const state: StateType = {
+        collapsed: false
+    }
+
+    expect(() => {reducer(state, {type: 'CRAZYTYPE'})}).toThrowError();
+})
