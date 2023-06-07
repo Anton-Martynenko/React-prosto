@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 import {NewMessageCounter} from "./reactMemo.stories";
 
 export default {
@@ -75,12 +75,23 @@ export const LikeUseCallback = () => {
     console.log("LikeUseCallback");
     const [counter, setCounter] = useState(0);
     const [books, setBooks] = useState(['React', 'JS', 'CSS', 'HTML']);
-    const addBook = () => {
-        const newBooks = [...books, 'Angular ' + new Date().getTime()];
-        setBooks(newBooks);
-    }
+    // const addBook = () => {
+    //     const newBooks = [...books, 'Angular ' + new Date().getTime()];
+    //     setBooks(newBooks);
+    // }
 
-    const memoizedAddBook = useMemo(() => {return addBook}, [books]);
+    const memoizedAddBook = useMemo(() => {
+        return () => {
+            console.log("books")
+            const newBooks = [...books, 'Angular ' + new Date().getTime()];
+            setBooks(newBooks);
+        }
+        }, [books]);
+    const memoizedAddBook2 = useCallback(() => {
+            console.log("books")
+            const newBooks = [...books, 'Angular ' + new Date().getTime()];
+            setBooks(newBooks);
+    }, [books]);
 
     // const newArray = useMemo(() => {
     //     return books.filter(u => u.toLowerCase().indexOf('a') > -1);
@@ -90,7 +101,7 @@ export const LikeUseCallback = () => {
         <button onClick={() => setCounter(counter + 1)}>+</button>
 
         {counter}
-        <Book addBook={memoizedAddBook}/>
+        <Book addBook={memoizedAddBook2}/>
     </>
 }
 
