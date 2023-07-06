@@ -11,7 +11,7 @@ export const SimpleExample = () => {
     useEffect(() => {
         console.log('useEffect every render')
         document.title = counter.toString();
-    }, )
+    },)
     useEffect(() => {
         console.log('useEffect only first render (componentDidMount)')
         document.title = counter.toString();
@@ -37,13 +37,30 @@ export const SetTimoutExample = () => {
             console.log('Set Timout')
             document.title = counter.toString();
         }, 1000)
-    }, )
+    },)
 
 
     return <>
         Hello, {counter} - {fake}
         <button onClick={() => setFake(fake + 1)}>Fake+</button>
         <button onClick={() => setCounter(counter + 1)}>Counter+</button>
+    </>
+}
+
+export const SetIntervalExample = () => {
+    const [fake, setFake] = useState(0);
+    const [counter, setCounter] = useState(0);
+    console.log('SetIntervalExample')
+    useEffect(() => {
+        setInterval(() => {
+            console.log('Set Interval' + counter)
+            setCounter(state => state + 1)
+        }, 1000)
+    },[])
+
+
+    return <>
+        Hello, counter: {counter} - fake: {fake}
     </>
 }
 
